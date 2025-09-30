@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC Racket - شحن UC ببجي</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="pubg-logo">PUBG</h1>
+        <h2>UC Racket</h2>
+    </header>
+
+    <main class="container">
+        <section class="uc-packages">
+            <h3 class="section-title">باقات شحن UC</h3>
+            <div class="packages-grid">
+                <div class="package-card" data-uc="60" data-price="50">
+                    <h4>60 UC</h4>
+                    <p>السعر: **50 جنيه**</p>
+                    <button class="buy-btn">اشترِ الآن</button>
+                </div>
+
+                <div class="package-card special-offer" data-uc="325" data-price-normal="250" data-price-first="220">
+                    <h4>325 UC (25 + 300)</h4>
+                    <p>السعر الأصلي: <del>250 جنيه</del></p>
+                    <p class="price">لأول زيارة: **220 جنيه**</p>
+                    <button class="buy-btn">اشترِ الآن</button>
+                </div>
+
+                <div class="package-card" data-uc="660" data-price="450">
+                    <h4>660 UC (600 + 60)</h4>
+                    <p>السعر: **450 جنيه**</p>
+                    <button class="buy-btn">اشترِ الآن</button>
+                </div>
+
+                <div class="package-card" data-uc="1800" data-price="1200">
+                    <h4>1800 UC (1500 + 300)</h4>
+                    <p>السعر: **1200 جنيه**</p>
+                    <button class="buy-btn">اشترِ الآن</button>
+                </div>
+
+                <div class="package-card" data-uc="3850" data-price="2500">
+                    <h4>3850 UC (3000 + 850)</h4>
+                    <p>السعر: **2500 جنيه**</p>
+                    <button class="buy-btn">اشترِ الآن</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="popularity-package">
+            <h3 class="section-title">شحن الشعبية (Popularity)</h3>
+            <div class="package-card popularity-card" data-uc="1000" data-price="40">
+                <h4>1000 شعبية</h4>
+                <p>السعر: **40 جنيه**</p>
+                <button class="buy-btn">اشترِ الآن</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="info-section">
+            <h3 class="section-title">طرق الدفع وضمان حقك</h3>
+            <div class="info-details">
+                <div class="payment-info">
+                    <h4>طريقة الدفع (فودافون كاش)</h4>
+                    <p>يتم الدفع عبر **فودافون كاش** فقط على الرقم:</p>
+                    <p class="phone-number">**01281891920**</p>
+                    <p>يرجى التأكد من تحويل المبلغ المطلوب بدقة.</p>
+                </div>
+                <div class="guarantee-info">
+                    <h4>ضمان العميل وحقه</h4>
+                    <p>لضمان حقك وحصولك على الشحن:</p>
+                    <p>سيتم إرسال **رسالة تلقائية عبر الواتساب** إلى الرقم **01281891920** بكل عملية شراء تتم عبر الموقع (اسم الباقة + ID العميل)، وهذا يعتبر بمثابة إيصال رسمي للعملية، يرجى الاحتفاظ بنسخة من الطلب المرسل إليك.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="id-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4 id="modal-title">تأكيد طلب الشحن</h4>
+            <p>أدخل **PUBG ID** الخاص بك:</p>
+            <p id="modal-details" class="item-details"></p>
+            <input type="text" id="player-id" placeholder="أدخل ID اللاعب هنا" required>
+            <button id="confirm-purchase">تأكيد الطلب والإرسال عبر واتساب</button>
+            <p class="note">سيتم توجيهك إلى واتساب لإتمام الطلب والمتابعة.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+/* استيراد الخط (تأكد من إضافته في HTML) */
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    /* خلفية عصرية وجذابة: صورة مظلمة بجودة عالية متعلقة بببجي مع تأثير تدرج */
+    background: url('https://picsum.photos/1920/1080?random=1') no-repeat center center fixed; /* يمكن استبدالها بصورة ببجي عالية الجودة */
+    background-size: cover;
+    color: #fff; /* لون الخط الأساسي أبيض */
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.75); /* خلفية شبه شفافة للمحتوى الرئيسي لإظهار الخلفية الجذابة */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 25, 0, 0.5); /* ظل أحمر خفيف لإضافة لمسة الألعاب */
+}
+
+/* اللوجو والعنوان الرئيسي */
+header {
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+.pubg-logo {
+    font-family: Arial, sans-serif; /* يُفضل استخدام خط PUBG الأصلي أو خط عريض جدًا */
+    font-size: 7vw; /* خط كبير جدًا */
+    color: #FFD700; /* لون ذهبي */
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.9), 0 0 20px rgba(255, 69, 0, 0.7); /* تأثير نيون/إضاءة */
+    margin-bottom: 5px;
+    font-weight: 900;
+}
+
+header h2 {
+    font-size: 2.5vw;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 0;
+    letter-spacing: 5px;
+}
+
+/* العناوين والأقسام */
+.section-title {
+    font-size: 2.2em;
+    color: #ff4500; /* لون برتقالي/أحمر حاد */
+    border-bottom: 3px solid #FFD700;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* تصميم بطاقات الباقات */
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.package-card {
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #333;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 69, 0, 0.4);
+    border-color: #ff4500;
+}
+
+.package-card h4 {
+    font-size: 1.8em;
+    color: #fff;
+    margin-top: 0;
+}
+
+.package-card p {
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+.package-card .price {
+    font-size: 1.4em;
+    color: #FFD700; /* ذهبي للسعر */
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.special-offer {
+    background-color: #ff4500;
+    border-color: #FFD700;
+    color: #fff;
+}
+.special-offer:hover {
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.6);
+}
+.special-offer p {
+    color: #eee;
+}
+.special-offer .price {
+    color: #000;
+    background-color: #FFD700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.popularity-card {
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+/* زر "اشترِ الآن" */
+.buy-btn {
+    background-color: #4CAF50; /* أخضر */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+}
+
+.buy-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* قسم المعلومات والضمان */
+.info-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.payment-info, .guarantee-info {
+    flex: 1;
+    min-width: 300px;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    border-right: 5px solid #ff4500;
+}
+
+.payment-info h4, .guarantee-info h4 {
+    color: #FFD700;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.phone-number {
+    font-size: 1.5em;
+    color: #4CAF50;
+    font-weight: 900;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* الـ Modal (النافذة المنبثقة) */
+.modal {
+    display: none; /* مخفية في البداية */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #222;
+    margin: 10% auto;
+    padding: 30px;
+    border: 5px solid #ff4500;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 69, 0, 0.7);
+}
+
+.close-btn {
+    color: #aaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #ff4500;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#player-id {
+    width: 90%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #111;
+    color: #fff;
+    font-size: 1.1em;
+    text-align: right;
+}
+
+#confirm-purchase {
+    background-color: #0088cc; /* أزرق للواتساب */
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+#confirm-purchase:hover {
+    background-color: #007bb5;
+    transform: scale(1.02);
+}
+
+.item-details {
+    font-size: 1.2em;
+    color: #FFD700;
+    font-weight: bold;
+}
+.note {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-top: 15px;
+}
+
+/* تعديل للاستيكرات عالية الجودة: هذه مجرد إضافة وهمية للتصميم */
+/* ستحتاج إلى إضافة صور فعليًا ذات جودة عالية في HTML/CSS */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 150px;
+    height: 150px;
+    background: url('sticker1.png') no-repeat center center; /* استبدلها بمسار استيكر PUBG عالي الجودة */
+    background-size: contain;
+    opacity: 0.6;
+    z-index: 0;
+}
+.container::after {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 150px;
+    height: 150px;
+    background: url('sticker2.png') no-repeat center center; /* استبدلها بمسار استيكر آخر */
+    background-size: contain;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+/* لجعل المحتوى فوق الاستيكرات */
+main.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* الوسائط المتعددة (للجوالات) */
+@media (max-width: 768px) {
+    header h1.pubg-logo {
+        font-size: 12vw;
+    }
+    header h2 {
+        font-size: 4vw;
+    }
+    .info-details {
+        flex-direction: column;
+    }
+    .payment-info, .guarantee-info {
+        min-width: 100%;
+        border-right: none;
+        border-bottom: 5px solid #ff4500;
+    }
+}
