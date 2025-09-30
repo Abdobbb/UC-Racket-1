@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. تأكيد الطلب وإنشاء رابط واتساب
     confirmPurchaseBtn.addEventListener('click', () => {
         const playerId = playerIdInput.value.trim();
-        const phoneNumber = '01281891920';
+        const phoneNumber = '201281891920';
         const packagePrice = selectedPackage.price;
         const packageName = selectedPackage.name;
 
@@ -85,6 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // إغلاق النافذة المنبثقة وتنظيف الإدخال
         modal.style.display = 'none';
         playerIdInput.value = '';
+       
+    
         alert('تم توجيهك إلى الواتساب! يُرجى إرسال الرسالة لإتمام الطلب.');
+تحياتي 
     });
+    
+
 });
