@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 - السعر: ${packagePrice} جنيه مصري
 - ID اللاعب: ${playerId}
 
-*تم الطلب عبر موقع UC Racket وهو ضمان حقي في الشحن. يرجى تأكيد العملية وإرسال تفاصيل الدفع (فودافون كاش) لإتمام الشحن.*
+*تم الطلب عبر موقع UC Racket يرجي ارسال  ${packagePrice} جنيه مصري الي الرقم الاتي (01281891920). وارسال صوره لعمليه التحويل لضمان حقك .*
         `.trim();
 
         // ترميز الرسالة لـ URL
@@ -93,3 +93,4 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
 });
+
